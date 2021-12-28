@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "g7SvpB0vAS1TyRHsW0wtIaC/wUzxAcKjmjdxPvCD5+g0ASSN5d+RrZ9uCK8XBzWdN9aMivfBc5AX+IAWQVdqGg==",
+  "success": true,
+  "projectFilePath": "E:\\Data\\Khang\\Learning\\third-year\\first-semester\\Mobile-Programing\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement.iOS\\PhoneManagement.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\khong\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Users\\khong\\.nuget\\packages\\xamarin.forms\\4.8.0.1821\\xamarin.forms.4.8.0.1821.nupkg.sha512"
+  ],
+  "logs": []
+}

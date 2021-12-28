@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PhoneManagement.Views.HistoryOrderPage">
+    <ContentPage.Content>
+        <ListView HasUnevenRows="True" x:Name="lvOrder" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+
+                        <StackLayout Padding="10" Margin="0,0,0,10">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding ProductCategory}" TextColor="Black" FontAttributes="Bold"></Label>
+                                <Label Text="Hoàn thành" HorizontalOptions="EndAndExpand" TextColor="Red" ></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding ProductImg}" WidthRequest="100"></Image>
+                                <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand" Margin="0,0,20,0">
+                                    <Label Text="{Binding ProductName}" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
+                                    <Label Text="{Binding ProductQuanity, StringFormat='x{0:C}'}" TextColor="Black" HorizontalOptions="EndAndExpand"></Label>
+                                    <Label Text="{Binding ProductPrice, StringFormat='{0:C} vnđ'}" TextColor="Black" HorizontalOptions="EndAndExpand"></Label>
+                                </StackLayout>
+                            </StackLayout>
+
+
+
+
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Đánh giá" BackgroundColor="blue" TextColor="White" Padding="20,5,20,5"></Label>
+                                <Label Text="{Binding ProductPrice, StringFormat='Thành tiền {0:C} vnđ'}" TextColor="Black" FontAttributes="Bold" HorizontalOptions="EndAndExpand" VerticalOptions="Center"></Label>
+                            </StackLayout>
+                        </StackLayout>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

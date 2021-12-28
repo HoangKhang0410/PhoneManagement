@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodel="clr-namespace:PhoneManagement.ViewModels"
+             xmlns:fa="clr-namespace:FontAwesome"
+             mc:Ignorable="d"
+             x:Class="PhoneManagement.Views.ProductDetailPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="FASolid" Glyph="{x:Static fa:FontAwesomeIcons.Heart}" Color="Red"/>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+        <ToolbarItem Order="Primary" x:Name="CartShoppingIcon" Clicked="CartShoppingIcon_Clicked">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="FASolid" Glyph="{x:Static fa:FontAwesomeIcons.ShoppingCart}" Color="WhiteSmoke"/>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="0">
+
+                <!--<CarouselView x:Name="banner">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Frame HasShadow="True"
+                                       BorderColor="DarkGray"
+                                       CornerRadius="5"
+                                       Margin="20"
+                                       HeightRequest="300"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="CenterAndExpand">
+                                    <Image Source="{Binding imageList}"/>
+                                </Frame>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>-->
+                <Image Source="samsung.jpg" Aspect="AspectFill"/>
+                <StackLayout Padding="20, 20, 20, 20"  BackgroundColor="White">
+                    <Label Text="SAMSUNG S21 5G" FontSize="Medium" TextColor="Black" FontAttributes="Bold" />
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="7.900.000 đ" FontSize="Medium" TextColor="Red" FontAttributes="Bold" 
+                           HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                        <Button Text="Đặt hàng" FontAttributes="Bold" TextColor="Red" BorderColor="Red" 
+                            HorizontalOptions="EndAndExpand" VerticalOptions="Center" BackgroundColor="White" BorderWidth="1" CornerRadius="20"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Mô tả" FontSize="Medium" TextColor="Black" FontAttributes="Bold" />
+                        <Label>
+                            Samsung Galaxy S21+ 5G sở hữu thiết kế mới lạ chưa từng có trên các smartphone trước đây với phần cụm camera gắn liền với cạnh mang vẻ đẹp độc đáo, tạo sự kết nối hài hòa, liền mạch. Galaxy S21+ 5G tiếp tục khẳng định đẳng cấp siêu phẩm qua chất lượng hoàn thiện cao, từng chi tiết nhỏ nhất đều được hoàn thành một cách tỉ mỉ tạo sự nhẹ nhàng, không hề thô cứng. Với thiết kế mỏng nhẹ ấn tượng với độ mỏng chỉ 7.8 mm và trọng lượng chỉ 201 g, Galaxy S21+ sẽ luôn thoải mái để các tín đồ công nghệ, game thủ, nhiếp ảnh gia có thể giải trí hay làm việc trong thời gian dài.
+                        </Label>
+                        <Label Text="Thông số kỹ thuật" FontSize="Medium" FontAttributes="Bold" Margin="0, 20, 0 , 20" TextColor="Black"/>
+                        <Grid BackgroundColor="Black" ColumnSpacing="1" RowSpacing="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Màn hình:" Grid.Column="0" Grid.Row="0" BackgroundColor="White" Padding="0, 10, 10, 10" VerticalTextAlignment="Center"/>
+                            <Label Text="'6.7', FHD+, Dynamic AMOLED 2X, 1080 x 2400 Pixel" Grid.Column="1" Grid.Row="0" BackgroundColor="White" Padding="10" VerticalTextAlignment="Center" />
+
+                            <Label Text="Camera Sau:" Grid.Column="0" Grid.Row="1" BackgroundColor="White" Padding="0, 10, 10, 10" VerticalTextAlignment="Center" />
+                            <Label Text="12.0 MP + 12.0 MP + 64.0 MP" Grid.Column="1" Grid.Row="1" BackgroundColor="White" Padding="10" VerticalTextAlignment="Center" />
+
+                            <Label Text="Camera Selfie:" Grid.Column="0" Grid.Row="2" BackgroundColor="White" Padding="0, 10, 10, 10" VerticalTextAlignment="Center" />
+                            <Label Text="10.0 MP" Grid.Column="1" Grid.Row="2" BackgroundColor="White" Padding="10" VerticalTextAlignment="Center" />
+
+                            <Label Text="RAM:" Grid.Column="0" Grid.Row="3" BackgroundColor="White" Padding="0, 10, 10, 10" VerticalTextAlignment="Center" />
+                            <Label Text="8 GB" Grid.Column="1" Grid.Row="3" BackgroundColor="White" Padding="10" VerticalTextAlignment="Center" />
+
+                            <Label Text="Bộ nhớ trong:" Grid.Column="0" Grid.Row="4" BackgroundColor="White" Padding="0, 10, 10, 10" VerticalTextAlignment="Center" />
+                            <Label Text="128 GB" Grid.Column="1" Grid.Row="4" BackgroundColor="White" Padding="10" VerticalTextAlignment="Center" />
+
+                            <Label Text="Pin:" Grid.Column="0" Grid.Row="5" BackgroundColor="White" Padding="0, 10, 10, 10" VerticalTextAlignment="Center" />
+                            <Label Text="4800 mAh" Grid.Column="1" Grid.Row="5" BackgroundColor="White" Padding="10" VerticalTextAlignment="Center" />
+                        </Grid>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Padding="20, 20, 20, 20"  BackgroundColor="White">
+                    <Label Text="Bình luận sản phẩm" FontSize="Medium" FontAttributes="Bold" TextColor="Black"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
