@@ -15,8 +15,8 @@ namespace PhoneManagement.Views
         public HomePage()
         {
             InitializeComponent();
-            this.Master = new MasterPage();
-            this.Detail = new NavigationPage(new DetailPage());
+            this.Master = new HomeMasterPage();
+            this.Detail = new NavigationPage(new HomeDetailPage());
             App.MasterDet = this;
         }
     }

@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="PhoneManagement.Views.ProfilePage">
     <ContentPage.Content>
-        <StackLayout>
+        <!--<StackLayout>
             <Frame HeightRequest="120" BackgroundColor="#A32BA5">
                 <StackLayout Orientation="Horizontal">
                     <Frame WidthRequest="100" HeightRequest="100" CornerRadius="100" Margin="0,0,20,0">
@@ -25,6 +25,6 @@
 
 
             <Button x:Name="btnLogout" Clicked="btnLogout_Clicked" Text="Đăng xuất" BackgroundColor="#A32BA5" TextColor="White" WidthRequest="200"></Button>
-        </StackLayout>
+        </StackLayout>-->
     </ContentPage.Content>
 </ContentPage>

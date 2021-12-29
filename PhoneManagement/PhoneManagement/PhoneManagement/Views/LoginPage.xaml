@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="PhoneManagement.Views.LoginPage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#e6e6e6">
+        <!--<StackLayout BackgroundColor="#e6e6e6">
             <Grid>
                 <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
                     <Frame HeightRequest="150" BackgroundColor="HotPink" Padding="0" Margin="0">
@@ -118,6 +118,6 @@
                     </Frame>
                 </StackLayout>
             </Grid>
-        </StackLayout>
+        </StackLayout>-->
     </ContentPage.Content>
 </ContentPage>

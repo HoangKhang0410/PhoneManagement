@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Data\\Khang\\Learning\\third-year\\first-semester\\Mobile-Programing\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj": {}
+    "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj": {}
   },
   "projects": {
-    "E:\\Data\\Khang\\Learning\\third-year\\first-semester\\Mobile-Programing\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj": {
+    "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Data\\Khang\\Learning\\third-year\\first-semester\\Mobile-Programing\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj",
+        "projectUniqueName": "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj",
         "projectName": "PhoneManagement",
-        "projectPath": "E:\\Data\\Khang\\Learning\\third-year\\first-semester\\Mobile-Programing\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj",
+        "projectPath": "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj",
         "packagesPath": "C:\\Users\\khong\\.nuget\\packages\\",
-        "outputPath": "E:\\Data\\Khang\\Learning\\third-year\\first-semester\\Mobile-Programing\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\obj\\",
+        "outputPath": "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -47,6 +47,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

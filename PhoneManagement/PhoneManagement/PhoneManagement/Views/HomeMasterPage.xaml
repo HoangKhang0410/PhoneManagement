@@ -7,9 +7,9 @@
              x:Class="PhoneManagement.Views.HomeMasterPage"
              Title="Master">
     <ContentPage.Content>
-        <StackLayout>
+        <!--<StackLayout>
             <Button x:Name="loginBtn" Clicked="loginBtn_Clicked" Text="Login" BackgroundColor="White" />
             <Button x:Name="registerBtn" Clicked="registerBtn_Clicked" Text="Login" BackgroundColor="White" />
-        </StackLayout>
+        </StackLayout>-->
     </ContentPage.Content>
 </ContentPage>

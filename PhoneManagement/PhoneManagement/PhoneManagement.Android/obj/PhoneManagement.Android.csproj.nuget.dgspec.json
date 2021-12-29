@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Data\\Khang\\Learning\\third-year\\first-semester\\Mobile-Programing\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement.Android\\PhoneManagement.Android.csproj": {}
+    "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement.Android\\PhoneManagement.Android.csproj": {}
   },
   "projects": {
-    "E:\\Data\\Khang\\Learning\\third-year\\first-semester\\Mobile-Programing\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement.Android\\PhoneManagement.Android.csproj": {
+    "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement.Android\\PhoneManagement.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Data\\Khang\\Learning\\third-year\\first-semester\\Mobile-Programing\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement.Android\\PhoneManagement.Android.csproj",
+        "projectUniqueName": "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement.Android\\PhoneManagement.Android.csproj",
         "projectName": "PhoneManagement.Android",
-        "projectPath": "E:\\Data\\Khang\\Learning\\third-year\\first-semester\\Mobile-Programing\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement.Android\\PhoneManagement.Android.csproj",
+        "projectPath": "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement.Android\\PhoneManagement.Android.csproj",
         "packagesPath": "C:\\Users\\khong\\.nuget\\packages\\",
-        "outputPath": "E:\\Data\\Khang\\Learning\\third-year\\first-semester\\Mobile-Programing\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement.Android\\obj\\",
+        "outputPath": "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "E:\\Data\\Khang\\Learning\\third-year\\first-semester\\Mobile-Programing\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj": {
-                "projectPath": "E:\\Data\\Khang\\Learning\\third-year\\first-semester\\Mobile-Programing\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj"
+              "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj": {
+                "projectPath": "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj"
               }
             }
           }
@@ -42,6 +42,10 @@
       "frameworks": {
         "monoandroid90": {
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.3.1, )"
@@ -54,14 +58,14 @@
         }
       }
     },
-    "E:\\Data\\Khang\\Learning\\third-year\\first-semester\\Mobile-Programing\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj": {
+    "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Data\\Khang\\Learning\\third-year\\first-semester\\Mobile-Programing\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj",
+        "projectUniqueName": "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj",
         "projectName": "PhoneManagement",
-        "projectPath": "E:\\Data\\Khang\\Learning\\third-year\\first-semester\\Mobile-Programing\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj",
+        "projectPath": "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj",
         "packagesPath": "C:\\Users\\khong\\.nuget\\packages\\",
-        "outputPath": "E:\\Data\\Khang\\Learning\\third-year\\first-semester\\Mobile-Programing\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\obj\\",
+        "outputPath": "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -97,6 +101,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

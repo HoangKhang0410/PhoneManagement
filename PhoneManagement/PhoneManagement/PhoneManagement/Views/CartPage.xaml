@@ -7,7 +7,7 @@
              xmlns:viewmodel="clr-namespace:PhoneManagement.ViewModels"
              x:Class="PhoneManagement.Views.CartPage">
     <ContentPage.Content>
-        <StackLayout>
+        <!--<StackLayout>
             <StackLayout Orientation="Horizontal" Margin="15" HorizontalOptions="Fill">
                 <StackLayout.GestureRecognizers>
                     <TapGestureRecognizer x:Name="addAddressPage" Tapped="addAddressPage_Tapped" />
@@ -41,6 +41,6 @@
                 <Label Text="Tổng tiền: 70000000" FontSize="Medium" VerticalOptions="Center" TextColor="OrangeRed"/>
                 <Button Text="Thanh Toán" BackgroundColor="OrangeRed" TextColor="White" FontSize="Medium" VerticalOptions="Center"/>
             </StackLayout>
-        </StackLayout>
+        </StackLayout>-->
     </ContentPage.Content>
 </ContentPage>
