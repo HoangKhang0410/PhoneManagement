@@ -1144,24 +1144,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\khong\\.nuget\\packages\\": {},
+    "C:\\Users\\asus\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement.iOS\\PhoneManagement.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\asus\\Desktop\\mobile\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.iOS\\PhoneManagement.iOS.csproj",
       "projectName": "PhoneManagement.iOS",
-      "projectPath": "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement.iOS\\PhoneManagement.iOS.csproj",
-      "packagesPath": "C:\\Users\\khong\\.nuget\\packages\\",
-      "outputPath": "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement.iOS\\obj\\",
+      "projectPath": "C:\\Users\\asus\\Desktop\\mobile\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.iOS\\PhoneManagement.iOS.csproj",
+      "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\asus\\Desktop\\mobile\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\khong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1175,8 +1175,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj": {
-              "projectPath": "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj"
+            "C:\\Users\\asus\\Desktop\\mobile\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj": {
+              "projectPath": "C:\\Users\\asus\\Desktop\\mobile\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj"
             }
           }
         }

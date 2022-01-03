@@ -4,9 +4,10 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             Title="Register Page"
              x:Class="PhoneManagement.Views.RegisterPage">
     <ContentPage.Content>
-        <!--<StackLayout BackgroundColor="#e6e6e6">
+        <StackLayout BackgroundColor="#e6e6e6">
             <Grid>
                 <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
                     <Frame HeightRequest="150" BackgroundColor="HotPink" Padding="0" Margin="0">
@@ -132,6 +133,6 @@
                     </Frame>
                 </StackLayout>
             </Grid>
-        </StackLayout>-->
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

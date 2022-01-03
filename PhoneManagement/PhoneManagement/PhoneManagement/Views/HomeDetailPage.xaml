@@ -4,8 +4,14 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="True"
+             xmlns:viewmodel="clr-namespace:PhoneManagement.ViewModels"
              x:Class="PhoneManagement.Views.HomeDetailPage">
-    <!--<ContentPage.ToolbarItems>
+    
+    <ContentPage.BindingContext>
+        <viewmodel:ProductViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.ToolbarItems>
         <ToolbarItem Text="Example Item"
             IconImageSource="Cart.png"
             Order="Primary"
@@ -70,7 +76,7 @@ VerticalOptions="Center" HorizontalOptions="Center"/>
 
 
 
-                <CarouselView x:Name="dsSanPham" HeightRequest="250" PeekAreaInsets="100">
+                <CarouselView x:Name="dsSanPham" HeightRequest="250" PeekAreaInsets="100" ItemsSource="{Binding AllProducts}" >
 
 
 
@@ -84,10 +90,10 @@ VerticalOptions="Center" HorizontalOptions="Center"/>
 
                                     BackgroundColor="White" Padding="0"
                                     HasShadow="True" Margin="10" CornerRadius="10"
-                                    HorizontalOptions="CenterAndExpand">            
+                                    HorizontalOptions="CenterAndExpand">
                                     <Grid>
                                         <StackLayout BackgroundColor="Black">
-                                            <Image Source="{Binding image}"
+                                            <Image Source="{Binding ProductImg}"
                                                 HeightRequest="250" Opacity="0.8"
                                                 Aspect="AspectFill"/>
                                         </StackLayout>
@@ -98,17 +104,15 @@ VerticalOptions="Center" HorizontalOptions="Center"/>
                                             <Image Source="https://images.vexels.com/media/users/3/147081/isolated/preview/8665e39f2880934120b3c37131210042-instagram-bookmark-icon-by-vexels.png"
                                                 HeightRequest="50"
                                                 Aspect="AspectFit" HorizontalOptions="EndAndExpand" Margin="10,0"/>
-                                            <Label Text="{Binding title}" TextColor="White" FontSize="18"
+                                            <Label Text="{Binding ProductName}" TextColor="White" FontSize="18"
                                                 FontAttributes="None" Margin="15,0"
                                                 VerticalOptions="EndAndExpand"/>
-
-
 
                                             <StackLayout Orientation="Horizontal" Margin="15,-8,0,0">
                                                 <Image Source="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678111-map-marker-512.png"
                                                     HeightRequest="20" Margin="-5,0"
                                                     Aspect="AspectFit"/>
-                                                <Label Text="{Binding price}" TextColor="White" FontSize="14"
+                                                <Label Text="{Binding ProductPrice}" TextColor="White" FontSize="14"
                                                     FontAttributes="None"
                                                     VerticalOptions="EndAndExpand"/>
                                             </StackLayout>
@@ -134,10 +138,10 @@ VerticalOptions="Center" HorizontalOptions="Center"/>
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <StackLayout Grid.Column="0">
-                        <ListView x:Name="lstProducts_1">
+                        <ListView x:Name="lstProducts_1" ItemsSource="{Binding AllProducts}" ItemTapped="lstProducts_1_ItemTapped">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <ImageCell ImageSource="{Binding image}" Text="{Binding title}" />
+                                    <ImageCell ImageSource="{Binding ProductImg}" Text="{Binding ProductName}" />
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
@@ -146,7 +150,7 @@ VerticalOptions="Center" HorizontalOptions="Center"/>
                         <ListView x:Name="lstProducts_2">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <ImageCell ImageSource="{Binding image}" Text="{Binding title}" />
+                                    <ImageCell ImageSource="{Binding ProductImg}" Text="{Binding ProductName}" />
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
@@ -154,5 +158,5 @@ VerticalOptions="Center" HorizontalOptions="Center"/>
                 </Grid>
             </StackLayout>
         </ScrollView>
-    </ContentPage.Content>-->
+    </ContentPage.Content>
 </ContentPage>
