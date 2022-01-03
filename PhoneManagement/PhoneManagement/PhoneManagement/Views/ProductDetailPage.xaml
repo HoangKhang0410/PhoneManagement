@@ -43,11 +43,11 @@
                         </DataTemplate>
                     </CarouselView.ItemTemplate>
                 </CarouselView>-->
-                <Image Source="samsung.jpg" Aspect="AspectFill"/>
+                <Image Source="{Binding ProductImg}" Aspect="AspectFill"/>
                 <StackLayout Padding="20, 20, 20, 20"  BackgroundColor="White">
-                    <Label Text="{Binding PRODUCT.ProductName}" FontSize="Medium" TextColor="Black" FontAttributes="Bold" />
+                    <Label Text="{Binding ProductName}" FontSize="Medium" TextColor="Black" FontAttributes="Bold" />
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="{Binding PRODUCT.ProductPrice}" FontSize="Medium" TextColor="Red" FontAttributes="Bold" 
+                        <Label Text="{Binding ProductPrice}" FontSize="Medium" TextColor="Red" FontAttributes="Bold" 
                            HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
                         <Button Text="Đặt hàng" FontAttributes="Bold" TextColor="Red" BorderColor="Red" 
                             HorizontalOptions="EndAndExpand" VerticalOptions="Center" BackgroundColor="White" BorderWidth="1" CornerRadius="20"/>

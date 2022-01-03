@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhoneManagement.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace PhoneManagement
         {
             InitializeComponent();
 
-            MainPage = new Views.ProductDetailPage();
+            MainPage = new NavigationPage(new HomePage());
         }
 
         protected override void OnStart()

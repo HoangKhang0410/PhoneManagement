@@ -16,5 +16,16 @@ namespace PhoneManagement.Views
         {
             InitializeComponent();
         }
+        private async void loginBtn_Clicked(object sender, EventArgs e)
+        {
+            App.MasterDet.IsPresented = false;
+            await App.MasterDet.Detail.Navigation.PushAsync(new LoginPage());
+        }
+
+        private async void registerBtn_Clicked(object sender, EventArgs e)
+        {
+            App.MasterDet.IsPresented = false;
+            await App.MasterDet.Detail.Navigation.PushAsync(new RegisterPage());
+        }
     }
 }
