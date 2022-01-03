@@ -10,7 +10,7 @@
     <ContentPage.BindingContext>
         <viewmodel:ProductViewModel />
     </ContentPage.BindingContext>
-    <!--<ContentPage.ToolbarItems>
+    <ContentPage.ToolbarItems>
         <ToolbarItem Order="Primary">
             <ToolbarItem.IconImageSource>
                 <FontImageSource FontFamily="FASolid" Glyph="{x:Static fa:FontAwesomeIcons.Heart}" Color="Red"/>
@@ -21,7 +21,7 @@
                 <FontImageSource FontFamily="FASolid" Glyph="{x:Static fa:FontAwesomeIcons.ShoppingCart}" Color="WhiteSmoke"/>
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
-    </ContentPage.ToolbarItems>-->
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="0">
@@ -43,14 +43,14 @@
                         </DataTemplate>
                     </CarouselView.ItemTemplate>
                 </CarouselView>-->
-                <Image Source="samsung.jpg" Aspect="AspectFill"/>
+                <Image Source="{Binding PRODUCT.ProductImg}" Aspect="AspectFill"/>
                 <StackLayout Padding="20, 20, 20, 20"  BackgroundColor="White">
                     <Label Text="{Binding PRODUCT.ProductName}" FontSize="Medium" TextColor="Black" FontAttributes="Bold" />
                     <StackLayout Orientation="Horizontal">
                         <Label Text="{Binding PRODUCT.ProductPrice}" FontSize="Medium" TextColor="Red" FontAttributes="Bold" 
                            HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
-                        <Button Text="Đặt hàng" FontAttributes="Bold" TextColor="Red" BorderColor="Red" 
-                            HorizontalOptions="EndAndExpand" VerticalOptions="Center" BackgroundColor="White" BorderWidth="1" CornerRadius="20"/>
+                        <Button Text="Thêm vào giỏ hàng" FontAttributes="Bold" TextColor="Red" BorderColor="Red" 
+                            HorizontalOptions="EndAndExpand" VerticalOptions="Center" BackgroundColor="White" BorderWidth="1" CornerRadius="20" Command="{Binding AddToCart(1, PRODUCT)}"/>
                     </StackLayout>
                     <StackLayout>
                         <Label Text="Mô tả" FontSize="Medium" TextColor="Black" FontAttributes="Bold" />

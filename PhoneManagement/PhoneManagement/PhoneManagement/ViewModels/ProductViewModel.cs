@@ -4,8 +4,11 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Net.Http;
 using System.Text;
+using System.Windows.Input;
 using Newtonsoft.Json;
 using PhoneManagement.Models;
+using PhoneManagement.Views;
+using Xamarin.Forms;
 
 namespace PhoneManagement.ViewModels
 {
@@ -30,7 +33,7 @@ namespace PhoneManagement.ViewModels
         async void GetProduct()
         {
             HttpClient http = new HttpClient();
-            var list = await http.GetStringAsync("http://192.168.0.106/webapidemo/api/ProductController/GetProductWithID?id=1");
+            var list = await http.GetStringAsync("http://www.wjbu-project.somee.com/api/ProductController/GetProductWithID?id=1");
             var listConvert = JsonConvert.DeserializeObject<List<Product>>(list);
             PRODUCT = new Product
             {
@@ -43,11 +46,27 @@ namespace PhoneManagement.ViewModels
                 CategoryID = listConvert[0].CategoryID
             };
 
+
         }
+
+        public ICommand AddToCart { get; private set; }
+        async void AddToCartFunc()
+        {
+            HttpClient http = new HttpClient();
+            var oke = await http.GetStringAsync("http://www.wjbu-project.somee.com/api/CartController/AddToCart?accountID=1" + "&productID=" + 1);
+            bool succeed = false;
+            Boolean.TryParse(oke, out succeed);
+            if (succeed)
+            {
+                await Application.Current.MainPage.DisplayAlert("Thong bao", "Them san pham vao gio hang thanh cong", "OK");
+            }
+        }
+
         public ProductViewModel()
         {
             GetProduct();
-    
+            AddToCart = new Command(AddToCartFunc);
+
         }
     }
 }

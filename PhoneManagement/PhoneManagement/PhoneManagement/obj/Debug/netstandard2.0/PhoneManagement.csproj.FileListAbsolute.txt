@@ -24,7 +24,6 @@ E:\Data\Khang\Learning\Final\PhoneManagement\PhoneManagement\PhoneManagement\bin
 E:\Data\Khang\Learning\Final\PhoneManagement\PhoneManagement\PhoneManagement\bin\Debug\netstandard2.0\PhoneManagement.dll
 E:\Data\Khang\Learning\Final\PhoneManagement\PhoneManagement\PhoneManagement\bin\Debug\netstandard2.0\ref\PhoneManagement.dll
 E:\Data\Khang\Learning\Final\PhoneManagement\PhoneManagement\PhoneManagement\bin\Debug\netstandard2.0\PhoneManagement.pdb
-E:\Data\Khang\Learning\Final\PhoneManagement\PhoneManagement\PhoneManagement\obj\Debug\netstandard2.0\PhoneManagement.csprojAssemblyReference.cache
 E:\Data\Khang\Learning\Final\PhoneManagement\PhoneManagement\PhoneManagement\obj\Debug\netstandard2.0\App.xaml.g.cs
 E:\Data\Khang\Learning\Final\PhoneManagement\PhoneManagement\PhoneManagement\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 E:\Data\Khang\Learning\Final\PhoneManagement\PhoneManagement\PhoneManagement\obj\Debug\netstandard2.0\Views\CartPage.xaml.g.cs
@@ -43,3 +42,4 @@ E:\Data\Khang\Learning\Final\PhoneManagement\PhoneManagement\PhoneManagement\obj
 E:\Data\Khang\Learning\Final\PhoneManagement\PhoneManagement\PhoneManagement\obj\Debug\netstandard2.0\PhoneManagement.dll
 E:\Data\Khang\Learning\Final\PhoneManagement\PhoneManagement\PhoneManagement\obj\Debug\netstandard2.0\ref\PhoneManagement.dll
 E:\Data\Khang\Learning\Final\PhoneManagement\PhoneManagement\PhoneManagement\obj\Debug\netstandard2.0\PhoneManagement.pdb
+E:\Data\Khang\Learning\Final\PhoneManagement\PhoneManagement\PhoneManagement\obj\Debug\netstandard2.0\PhoneManagement.csprojAssemblyReference.cache
