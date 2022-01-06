@@ -10,7 +10,7 @@ namespace PhoneManagement
         {
             InitializeComponent();
 
-            MainPage = new Views.ProductDetailPage();
+            MainPage = new NavigationPage(new Views.ProfilePage());
         }
 
         protected override void OnStart()

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj": {}
+    "C:\\Users\\THAI\\Desktop\\Mobile\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj": {}
   },
   "projects": {
-    "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj": {
+    "C:\\Users\\THAI\\Desktop\\Mobile\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj",
+        "projectUniqueName": "C:\\Users\\THAI\\Desktop\\Mobile\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj",
         "projectName": "PhoneManagement",
-        "projectPath": "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj",
-        "packagesPath": "C:\\Users\\khong\\.nuget\\packages\\",
-        "outputPath": "E:\\Data\\Khang\\Learning\\Final\\PhoneManagement\\PhoneManagement\\PhoneManagement\\obj\\",
+        "projectPath": "C:\\Users\\THAI\\Desktop\\Mobile\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement.csproj",
+        "packagesPath": "C:\\Users\\THAI\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\THAI\\Desktop\\Mobile\\PhoneManagement\\PhoneManagement\\PhoneManagement\\PhoneManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\khong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\THAI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -52,6 +52,10 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
+            "Rg.Plugins.Popup": {
+              "target": "Package",
+              "version": "[2.0.0.14, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.3.1, )"
@@ -71,7 +75,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

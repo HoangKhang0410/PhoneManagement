@@ -3,28 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodel="clr-namespace:PhoneManagement.ViewModels"
+             xmlns:fa="clr-namespace:FontAwesome"
              mc:Ignorable="d"
              x:Class="PhoneManagement.Views.ProfilePage">
+    <ContentPage.BindingContext>
+        <viewmodel:ProfileViewModel></viewmodel:ProfileViewModel>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <!--<StackLayout>
+        <StackLayout>
             <Frame HeightRequest="120" BackgroundColor="#A32BA5">
                 <StackLayout Orientation="Horizontal">
                     <Frame WidthRequest="100" HeightRequest="100" CornerRadius="100" Margin="0,0,20,0">
                         <Image Source="default_avatar.png"></Image>
                     </Frame>
                     <StackLayout VerticalOptions="Center">
-                        <Label Text="Ngô Gia Thái" FontSize="24" TextColor="White" ></Label>
-                        <Label Text="chỉnh sửa thông tin" TextColor="White"></Label>
+                        <Label Text="{Binding Profile.ACCOUNTNAME, Mode=TwoWay}" FontSize="24" TextColor="White" ></Label>
+                        <StackLayout>
+
+
+                            <Button x:Name="btnEditProfile" Text="Chỉnh sửa thông tin" Clicked="btnEditProfile_Clicked"></Button>
+                        </StackLayout>
                     </StackLayout>
                 </StackLayout>
             </Frame>
-            <Label Text="03557988782" Padding="20,10,0,10" TextColor="Black"></Label>
-            <Label Text="giathai1505@gammil.com" Padding="20,10,0,10" TextColor="Black"></Label>
-
-
-
-
-            <Button x:Name="btnLogout" Clicked="btnLogout_Clicked" Text="Đăng xuất" BackgroundColor="#A32BA5" TextColor="White" WidthRequest="200"></Button>
-        </StackLayout>-->
+            <Label Text="{Binding Profile.ACCOUNTNAME,Mode=TwoWay}" Padding="20,10,0,10" TextColor="Black"></Label>
+            <Label Text="{Binding Profile.ACCOUNTEMAIL, Mode=TwoWay}" Padding="20,10,0,10" TextColor="Black"></Label>
+            <Button x:Name="btnLogout" Text="Đăng xuất" BackgroundColor="#A32BA5" TextColor="White" Padding="50,0,50,0" HorizontalOptions="CenterAndExpand"></Button>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
