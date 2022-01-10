@@ -6,30 +6,29 @@
              mc:Ignorable="d"
              xmlns:viewmodel="clr-namespace:PhoneManagement.ViewModels"
              x:Class="PhoneManagement.Views.CartPage">
+    <ContentPage.BindingContext>
+        <viewmodel:CartViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <!--<StackLayout>
+        <StackLayout>
             <StackLayout Orientation="Horizontal" Margin="15" HorizontalOptions="Fill">
-                <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer x:Name="addAddressPage" Tapped="addAddressPage_Tapped" />
-                </StackLayout.GestureRecognizers>
+                
                 <Label FontFamily="FASolid" Text="&#xf041;" FontSize="Medium" TextColor="Blue" VerticalTextAlignment="Center">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                    </Label.GestureRecognizers>
+                    
                 </Label>
                 <Label Text="Add Shipping Address" FontSize="Medium" TextColor="Black" VerticalTextAlignment="Center"/>
                 <Label FontFamily="FASolid" Text="&#xf105;" FontSize="Medium" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
             </StackLayout>
-            <ListView x:Name="ProductList" HasUnevenRows="True">
+            <ListView x:Name="ProductList" HasUnevenRows="True" ItemsSource="{Binding LISTPRODUCT}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal" Margin="0,10,0,10">
-                                <Image Source="{Binding productImage}" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />
+                                <Image Source="{Binding ProductImg}" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />
                                 <StackLayout>
-                                    <Label FontAttributes="Bold" FontSize="Medium" TextColor="Black" Text="{Binding productName}" />
-                                    <Label Text="{Binding productDescription}" VerticalOptions="CenterAndExpand" />
-                                    <Label Text="{Binding productPrice, StringFormat='{0:F0}đ'}" TextColor="Red"  VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="Medium"/>
+                                    <Label FontAttributes="Bold" FontSize="Medium" TextColor="Black" Text="{Binding ProductName}" />
+                                    <Label Text="{Binding ProductQuanity}" VerticalOptions="CenterAndExpand" />
+                                    <Label Text="{Binding ProductPrice, StringFormat='{0:F0}đ'}" TextColor="Red"  VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="Medium"/>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>
@@ -38,9 +37,9 @@
             </ListView>
             <StackLayout Orientation="Horizontal">
                 <Label FontFamily="FASolid" Text="&#xf290;" TextColor="OrangeRed" FontSize="Large" Margin="20,0,0,0" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
-                <Label Text="Tổng tiền: 70000000" FontSize="Medium" VerticalOptions="Center" TextColor="OrangeRed"/>
+                <Label Text="{Binding CART.CartTotal}" FontSize="Medium" VerticalOptions="Center" TextColor="OrangeRed"/>
                 <Button Text="Thanh Toán" BackgroundColor="OrangeRed" TextColor="White" FontSize="Medium" VerticalOptions="Center"/>
             </StackLayout>
-        </StackLayout>-->
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

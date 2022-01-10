@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhoneManagement.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,12 @@ namespace PhoneManagement.Views
         public HomeDetailPage()
         {
             InitializeComponent();
+        }
+
+        private void lstProducts_1_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var details = e.Item as Product;
+            Navigation.PushAsync(new ProductDetailPage(details));
         }
     }
 }

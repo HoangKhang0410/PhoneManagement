@@ -14,19 +14,27 @@ namespace PhoneManagement.ViewModels
 {
     public class ProductViewModel:INotifyPropertyChanged
     {
-        Product product;
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-    public Product PRODUCT
+        Product product;
+        ObservableCollection<Product> _AllProducts;
+        public Product PRODUCT
         {
             get { return product; }
             set { 
                 product = value;
                 OnPropertyChanged("PRODUCT");
+            }
+        }
+        public ObservableCollection<Product> AllProducts
+        {
+            get { return _AllProducts; }
+            set { _AllProducts = value;
+                OnPropertyChanged("AllProducts");
             }
         }
 
@@ -48,25 +56,47 @@ namespace PhoneManagement.ViewModels
 
 
         }
-
         public ICommand AddToCart { get; private set; }
-        async void AddToCartFunc()
+        async void AddToCartFunc(string pID)
         {
             HttpClient http = new HttpClient();
-            var oke = await http.GetStringAsync("http://www.wjbu-project.somee.com/api/CartController/AddToCart?accountID=1" + "&productID=" + 1);
-            bool succeed = false;
-            Boolean.TryParse(oke, out succeed);
-            if (succeed)
-            {
-                await Application.Current.MainPage.DisplayAlert("Thong bao", "Them san pham vao gio hang thanh cong", "OK");
-            }
+            var oke = await http.GetStringAsync("http://192.168.0.106/webapidemo/api/CartController/AddToCart?accountID=1" + "&pID=" + pID);
+            //bool succeed = false;
+            //Boolean.TryParse(oke, out succeed);
+            //if (succeed)
+            //{
+
+            //}
+            await Application.Current.MainPage.DisplayAlert("Thong bao", "Them san pham vao gio hang thanh cong", "OK");
         }
 
+        async void GetAllProducts()
+        {
+            HttpClient http = new HttpClient();
+            var data = await http.GetStringAsync("http://192.168.0.106/webapidemo/api/ProductController/GetAllProducts");
+            var allProducts = JsonConvert.DeserializeObject<List<Product>>(data);
+            AllProducts = new ObservableCollection<Product>();
+            for(int i = 0; i < allProducts.Count; i++)
+            {
+                AllProducts.Add(allProducts[i]);
+            }
+        }
+        public ICommand ProductsCarousel { get; private set; }
+
+        public ICommand LoginCommand { get; set; }
+        async void CheckLogin(string[] arr)
+        {
+            await Application.Current.MainPage.DisplayAlert("Thong bao", arr[1], "OK");
+        }
+        
         public ProductViewModel()
         {
             GetProduct();
-            AddToCart = new Command(AddToCartFunc);
-
+            AllProducts = new ObservableCollection<Product>();
+            ProductsCarousel = new Command(GetProduct);
+            GetAllProducts();
+            AddToCart = new Command<string>(AddToCartFunc);
+            LoginCommand = new Command<string[]>(CheckLogin);
         }
     }
 }

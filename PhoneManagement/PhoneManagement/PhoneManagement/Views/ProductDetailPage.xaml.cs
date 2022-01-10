@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhoneManagement.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,19 @@ namespace PhoneManagement.Views
     {
         public ProductDetailPage()
         {
+            InitializeComponent();         
+        }
+        public ProductDetailPage(Product details)
+        {
             InitializeComponent();
+            price.Text = details.ProductPrice.ToString();
+            name.Text = details.ProductName;
+            addBtn.CommandParameter = details.ProductID.ToString();
+        }
+
+        private void CartShoppingIcon_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new CartPage());
         }
     }
 }

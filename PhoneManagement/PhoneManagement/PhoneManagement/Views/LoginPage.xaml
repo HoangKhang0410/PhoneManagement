@@ -4,9 +4,14 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             Title="Login Page"
+             xmlns:viewmodel="clr-namespace:PhoneManagement.ViewModels"
              x:Class="PhoneManagement.Views.LoginPage">
+    <ContentPage.BindingContext>
+        <viewmodel:ProductViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <!--<StackLayout BackgroundColor="#e6e6e6">
+        <StackLayout BackgroundColor="#e6e6e6">
             <Grid>
                 <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
                     <Frame HeightRequest="150" BackgroundColor="HotPink" Padding="0" Margin="0">
@@ -41,7 +46,7 @@
 
 
 
-                                        <Entry Placeholder="Email" TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                        <Entry Placeholder="Email" TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" x:Name="TK" Keyboard="Text"/>
                                     </StackLayout>
                                 </Frame>
 
@@ -55,7 +60,7 @@
 
 
 
-                                        <Entry Placeholder="Mật khẩu" IsPassword="True" TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                        <Entry Placeholder="Mật khẩu" IsPassword="True" TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" x:Name="MK" Keyboard="Text"/>
                                     </StackLayout>
                                 </Frame>
 
@@ -76,7 +81,7 @@
 
 
 
-                                <Button x:Name="loginBtn" Clicked="loginBtn_Clicked" Text="SIGN IN" BackgroundColor="HotPink" TextColor="White" CornerRadius="30" />
+                                <Button x:Name="loginBtn" Clicked="loginBtn_Clicked" Text="SIGN IN" BackgroundColor="HotPink" TextColor="White" CornerRadius="30" Command="{Binding LoginCommand}" CommandParameter="{x:Reference loginBtn}" />
                                 <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
                                     <Label Text="Bạn chưa có tài khoản?" TextColor="DarkGray" FontSize="Small" VerticalOptions="Center" />
                                     <Button x:Name="registerBtn" Clicked="registerBtn_Clicked" Text="Đăng ký" VerticalOptions="Center" BackgroundColor="Transparent" TextColor="Black" FontAttributes="Bold" FontSize="Small"/>
@@ -118,6 +123,6 @@
                     </Frame>
                 </StackLayout>
             </Grid>
-        </StackLayout>-->
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

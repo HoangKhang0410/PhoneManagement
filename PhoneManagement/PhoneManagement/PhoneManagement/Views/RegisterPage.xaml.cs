@@ -16,5 +16,15 @@ namespace PhoneManagement.Views
         {
             InitializeComponent();
         }
+
+        private void registerBtn_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new HomePage());
+        }
+
+        private void login_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new LoginPage());
+        }
     }
 }
