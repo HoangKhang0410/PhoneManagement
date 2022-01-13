@@ -8,7 +8,7 @@
              xmlns:viewmodel="clr-namespace:PhoneManagement.ViewModels"
              x:Class="PhoneManagement.Views.LoginPage">
     <ContentPage.BindingContext>
-        <viewmodel:ProductViewModel />
+        <viewmodel:LoginViewModel />
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout BackgroundColor="#e6e6e6">

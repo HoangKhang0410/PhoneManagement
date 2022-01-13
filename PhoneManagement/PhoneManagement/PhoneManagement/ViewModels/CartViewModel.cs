@@ -82,8 +82,8 @@ namespace PhoneManagement.ViewModels
 
         public CartViewModel()
         {
-            RenderCartPage();
-            GetCart();
+            //RenderCartPage();
+            //GetCart();
         }
     }
 }

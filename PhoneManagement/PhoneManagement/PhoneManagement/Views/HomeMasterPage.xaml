@@ -7,9 +7,13 @@
              x:Class="PhoneManagement.Views.HomeMasterPage"
              Title="Master">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Button x:Name="loginBtn" Clicked="loginBtn_Clicked" Text="Login" BackgroundColor="White" />
-            <Button x:Name="registerBtn" Clicked="registerBtn_Clicked" Text="Register" BackgroundColor="White" />
+        <StackLayout>
+            <StackLayout Margin="0,100,0,30">
+                <Image HeightRequest="100" Source="https://lh3.googleusercontent.com/zD4sseRh2ojAarJvJ8bcOTCHKAQaJ-O_ME43F7upAbi4aRikF6V65c6Ir43HmREV-0DwZgujYI9c5Cb8xh91kqKmpxVtm0WBXZC-OUReLAV5czZcEn1XZeVUP_vV7E8c9efiiX2nWdCs8g2-Cki6YP4_slQSvoxhkw16pOCjztP37xuS7BaT0MIAC3-cfWAxWj-6Un3AnuwTMAmUS1uPej4IkMLjrKg1KfGrHxU2XvLtxfbAZ6OgEm2QfcWFzId8DgrDEiHzzDcoDLUEFwtYE_zv-X0-4x-UCygGh5QKxNF00ZifmMwmNGFlAnxC7OmsOv_6VZgE6BhoMWqlllAXHVhIew04Yxhn7TTh5sCO-Mit_XnTVLeda1eggee3-f0tESBQNcSOBZF2hKH_AK-iBfuCQ_zDlp8ZkzY-3CAVcGvol6UJmqxMrvq6HiHd0ca7Z_wSz34fpcXlmhMuVXvsRo1tpPCUPfEn5xqPGYBtXHWKqlm1rtA_dyAF86PnKggunbg708x4LznD-wvByasNK3vvWvfRTd52fVAR4IVTXuLu1I6BIei0WZzkGmyhM9WBTYer5R9Fm1RUiEm-mQo9rFIID9paYwPBUHM5x5-Hcue0qiPVww8Esi31LzzoTu2_P7ivtEqbuFspvC1gvUJtIMR2Gl4SJZNw3dF0TUTKPVzzIz6101tY-pv4LkS2l7bsytuL3MgG2crSgKIna9goT2c=w635-h571-no?authuser=1" />
+            </StackLayout>
+            <Button x:Name="Profile" Text="Thông tin cá nhân" BackgroundColor="WhiteSmoke" />
+            <Button x:Name="loginBtn" Clicked="loginBtn_Clicked" Text="Login" BackgroundColor="WhiteSmoke" />
+            <Button x:Name="registerBtn" Clicked="registerBtn_Clicked" Text="Register" BackgroundColor="WhiteSmoke" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -4,157 +4,91 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:fa="clr-namespace:FontAwesome"
              NavigationPage.HasNavigationBar="True"
              xmlns:viewmodel="clr-namespace:PhoneManagement.ViewModels"
              x:Class="PhoneManagement.Views.HomeDetailPage">
-    
+
     <ContentPage.BindingContext>
         <viewmodel:ProductViewModel />
     </ContentPage.BindingContext>
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Example Item"
-            IconImageSource="Cart.png"
-            Order="Primary"
-            Priority="0" />
-    </ContentPage.ToolbarItems>
 
-
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" Margin="10,10,0,10" VerticalOptions="Center">
+            <!--<Entry Placeholder="Search..." HorizontalOptions="StartAndExpand" VerticalOptions="Center"  />-->
+            <SearchBar Margin="0,0,0,10" WidthRequest="270" TextColor="White" BackgroundColor="White" x:Name="LookupBar" SearchCommand="{Binding SearchProductCommand}" FlexLayout.AlignSelf="Center"
+           SearchCommandParameter="{Binding Source={x:Reference LookupBar}, Path=Text}"  HorizontalOptions="Start" Placeholder="Search..."></SearchBar>
+            <Label Margin="0,10,0,0" FontSize="25" FontFamily="FASolid" Text="&#xf07a;" TextColor="WhiteSmoke" FlexLayout.AlignSelf="Center" />
+        </StackLayout>
+    </NavigationPage.TitleView>
 
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-
-
-
-                <Grid Margin="0,5,0,50">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-                    <Label Grid.Column="1" Text="Phone Shop" TextColor="#2D2942" FontSize="24" FontAttributes="Bold"
-VerticalOptions="Center" HorizontalOptions="Center"/>
-
-
-
-                </Grid>
-
-
-
-                <Grid ColumnSpacing="15" Margin="30,0,30,30">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-                    <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" Grid.Column="0" Grid.ColumnSpan="2" WidthRequest="400">
-                        <StackLayout Orientation="Horizontal">
-                            <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
-                                <Image Source="search.png" Aspect="AspectFill" Margin="0"/>
-                            </Frame>
-
-
-
-                            <Entry Placeholder="Tìm kiếm" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
-                        </StackLayout>
-                    </Frame>
-
-
-
-                    <StackLayout Grid.Column="2" Orientation="Horizontal">
-                        <Picker Title="Sắp xếp" x:Name="pickUserType" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand" />
-                        <Image Source="Filter.png" VerticalOptions="Center" HeightRequest="20" WidthRequest="20"/>
-                    </StackLayout>
-                </Grid>
-                <Grid ColumnSpacing="15">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-                    <Label Grid.Column="0" Text="Popular" TextColor="#2D2942" FontSize="20" FontAttributes="Bold" VerticalOptions="Center" />
-                </Grid>
-
-
-
-                <CarouselView x:Name="dsSanPham" HeightRequest="250" PeekAreaInsets="100" ItemsSource="{Binding AllProducts}" >
-
-
-
-                    <CarouselView.ItemTemplate>
-                        <DataTemplate>
-
-
-
-                            <StackLayout>
-                                <Frame HeightRequest="280" WidthRequest="180"
-
-                                    BackgroundColor="White" Padding="0"
-                                    HasShadow="True" Margin="10" CornerRadius="10"
-                                    HorizontalOptions="CenterAndExpand">
-                                    <Grid>
-                                        <StackLayout BackgroundColor="Black">
-                                            <Image Source="{Binding ProductImg}"
-                                                HeightRequest="250" Opacity="0.8"
-                                                Aspect="AspectFill"/>
-                                        </StackLayout>
-                                        <StackLayout Margin="0,0,0,10">
-
-
-
-                                            <Image Source="https://images.vexels.com/media/users/3/147081/isolated/preview/8665e39f2880934120b3c37131210042-instagram-bookmark-icon-by-vexels.png"
-                                                HeightRequest="50"
-                                                Aspect="AspectFit" HorizontalOptions="EndAndExpand" Margin="10,0"/>
-                                            <Label Text="{Binding ProductName}" TextColor="White" FontSize="18"
-                                                FontAttributes="None" Margin="15,0"
-                                                VerticalOptions="EndAndExpand"/>
-
-                                            <StackLayout Orientation="Horizontal" Margin="15,-8,0,0">
-                                                <Image Source="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678111-map-marker-512.png"
-                                                    HeightRequest="20" Margin="-5,0"
-                                                    Aspect="AspectFit"/>
-                                                <Label Text="{Binding ProductPrice}" TextColor="White" FontSize="14"
-                                                    FontAttributes="None"
-                                                    VerticalOptions="EndAndExpand"/>
-                                            </StackLayout>
-                                        </StackLayout>
-                                    </Grid>
-
-
-
-                                </Frame>
+                <StackLayout>
+                    <Image Source="https://demo.codezeel.com/opencart/OPC06/OPC060143/image/cache/catalog/main-banner-1-1131x498.jpg" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  />
+                </StackLayout>
+                <StackLayout Margin="0, 10, 0, 0" HeightRequest="100">
+                    <StackLayout>
+                        <Grid Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" Padding="10">
+                                <ImageButton Command="{Binding ShowCategoryProductCommand}" CommandParameter="1" Source="https://rubee.com.vn/admin/webroot/upload/image//images/tin-tuc/logo-iphone-2.jpg" />
                             </StackLayout>
-
-
-
-                        </DataTemplate>
-                    </CarouselView.ItemTemplate>
-                </CarouselView>
-
-
-
-                <Grid HeightRequest="400">
+                            <StackLayout Grid.Column="1" Grid.Row="0"  VerticalOptions="Center" Padding="10">
+                                <ImageButton Command="{Binding ShowCategoryProductCommand}" CommandParameter="2" Source="https://cdn.tgdd.vn/Files/2019/03/12/1154295/oppo-logo-old_600x277.jpg" />
+                            </StackLayout>
+                            <StackLayout Grid.Column="2" Grid.Row="0"  VerticalOptions="Center" Padding="10">
+                                <ImageButton Command="{Binding ShowCategoryProductCommand}" CommandParameter="3" Source="https://img2.thuthuatphanmem.vn/uploads/2018/12/13/logo-samsung-dep_033419001.jpg" />
+                            </StackLayout>
+                            <StackLayout Grid.Column="3" Grid.Row="0"  VerticalOptions="Center" Padding="10">
+                                <ImageButton Command="{Binding ShowCategoryProductCommand}" CommandParameter="4" Source="https://mediaonlinevn.com/wp-content/uploads/2021/03/210331-xiaomi-new-logo-01-680x365_c.jpg" />
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout Margin="30, 0, 0, 0">
+                        <Label Text="Sản phẩm nổi bật" FontSize="Large" FontAttributes="Bold" TextColor="Black" />
+                    </StackLayout>
+                </StackLayout>
+                <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <StackLayout Grid.Column="0">
-                        <ListView x:Name="lstProducts_1" ItemsSource="{Binding AllProducts}" ItemTapped="lstProducts_1_ItemTapped">
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <ImageCell ImageSource="{Binding ProductImg}" Text="{Binding ProductName}" />
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
-                    </StackLayout>
-                    <StackLayout Grid.Column="1">
-                        <ListView x:Name="lstProducts_2">
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <ImageCell ImageSource="{Binding ProductImg}" Text="{Binding ProductName}" />
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
-                    </StackLayout>
+                    <ListView x:Name="lstProducts_1" ItemTapped="lstProducts_1_ItemTapped" Grid.Column="0" ItemsSource="{Binding AllProducts1, Mode=TwoWay}" HasUnevenRows="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout>
+                                        <Image HeightRequest="200" Source="{Binding ProductImg}" />
+                                        <Label Text="{Binding ProductName}" TextColor="Black" FontAttributes="Bold"  HorizontalOptions="Center"/>
+                                        <Label Text="{Binding ProductPrice, StringFormat='{0:#,0.#0} đ'}" TextColor="DarkOrange" FontAttributes="Bold" HorizontalOptions="Center"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <ListView x:Name="lstProducts_2" ItemTapped="lstProducts_2_ItemTapped" Grid.Column="1" ItemsSource="{Binding AllProducts2, Mode=TwoWay}" HasUnevenRows="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout>
+                                        <Image HeightRequest="200" Source="{Binding ProductImg}" />
+                                        <Label Text="{Binding ProductName}" TextColor="Black" FontAttributes="Bold"  HorizontalOptions="Center" />
+                                        <Label Text="{Binding ProductPrice, StringFormat='{0:#,0.#0} đ'}" TextColor="DarkOrange" FontAttributes="Bold"  HorizontalOptions="Center"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </Grid>
             </StackLayout>
         </ScrollView>

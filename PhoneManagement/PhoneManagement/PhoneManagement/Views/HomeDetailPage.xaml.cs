@@ -23,5 +23,10 @@ namespace PhoneManagement.Views
             var details = e.Item as Product;
             Navigation.PushAsync(new ProductDetailPage(details));
         }
+        private void lstProducts_2_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var details = e.Item as Product;
+            Navigation.PushAsync(new ProductDetailPage(details));
+        }
     }
 }

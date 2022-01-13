@@ -19,7 +19,6 @@ namespace PhoneManagement.Views
 
         private void loginBtn_Clicked(object sender, EventArgs e)
         {
-            //Navigation.PushAsync(new HomePage());
             string[] arr = new string[] { TK.Text, MK.Text };
             loginBtn.CommandParameter = arr;
         }
