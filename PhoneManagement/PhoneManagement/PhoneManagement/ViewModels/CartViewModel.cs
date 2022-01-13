@@ -186,7 +186,16 @@ namespace PhoneManagement.ViewModels
             string json = JsonConvert.SerializeObject(newShipping);
             StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
             var list = await http.PostAsync("http://192.168.1.5/webapidemo/api/ShippingController/AddNewAddress", content);
-            await Application.Current.MainPage.DisplayAlert(arr[0], arr[1], arr[2]);
+            await Application.Current.MainPage.DisplayAlert("Thong bao", "Them dia chi moi thanh cong", "OK");
+        }
+
+        public ICommand Checkout { get; set; }
+        async void CheckoutFunc(object note)
+        {
+            HttpClient http = new HttpClient();
+            var list = await http.GetStringAsync("http://192.168.1.5/webapidemo/api/OrderController/Checkout?accountID=1" + "&cartID=" + CART.CartID + "&shippingID=1" + "&orderNote=" + note.ToString());
+            await Application.Current.MainPage.DisplayAlert("Thông báo", "Đặt hàng thành công", "OK");
+            await Application.Current.MainPage.Navigation.PushAsync(new HomePage());
         }
 
         public CartViewModel()
@@ -197,6 +206,7 @@ namespace PhoneManagement.ViewModels
             minusCommand = new Command(minusFunc);
             LISTADDRESS = new ObservableCollection<Shipping>();
             AddNewAddress = new Command<string[]>(AddNewAddressFunc);
+            Checkout = new Command(CheckoutFunc);
             GetShipping();
         }
     }

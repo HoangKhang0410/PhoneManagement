@@ -15,6 +15,11 @@ namespace PhoneManagement.Views
         public NewAddressPage()
         {
             InitializeComponent();
+            
+        }
+
+        private void addNewBtn_Clicked(object sender, EventArgs e)
+        {
             string[] arr = new string[]
             {
                 customerName.Text,
