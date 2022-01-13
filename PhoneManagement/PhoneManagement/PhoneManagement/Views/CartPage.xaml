@@ -19,7 +19,7 @@
                 <Label FontFamily="FASolid" Text="&#xf041;" FontSize="Medium" TextColor="Blue" VerticalTextAlignment="Center">
 
                 </Label>
-                <Button Text="Add Shipping Address" FontSize="Medium" TextColor="Black" VerticalOptions="Center" BackgroundColor="Transparent"/>
+                <Button Text="Them moi dia chi" FontSize="Medium" TextColor="Black" VerticalOptions="Center" BackgroundColor="Transparent" Clicked="Button_Clicked"/>
 
                 <Label FontFamily="FASolid" Text="&#xf105;" FontSize="Medium" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
             </StackLayout>

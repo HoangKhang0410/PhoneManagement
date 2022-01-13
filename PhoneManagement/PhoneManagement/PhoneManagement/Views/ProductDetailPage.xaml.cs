@@ -22,6 +22,7 @@ namespace PhoneManagement.Views
             InitializeComponent();
             price.Text = details.ProductPrice.ToString();
             name.Text = details.ProductName;
+            image.Source = details.ProductImg;
             addBtn.CommandParameter = details.ProductID.ToString();
         }
 

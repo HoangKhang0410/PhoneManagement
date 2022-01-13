@@ -10,16 +10,18 @@ using Xamarin.Forms.Xaml;
 namespace PhoneManagement.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CartPage : ContentPage
+    public partial class NewAddressPage : ContentPage
     {
-        public CartPage()
+        public NewAddressPage()
         {
             InitializeComponent();
-        }
-
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new NewAddressPage());
+            string[] arr = new string[]
+            {
+                customerName.Text,
+                customerAddress.Text,
+                customerPhone.Text,
+            };
+            addNewBtn.CommandParameter = arr;
         }
     }
 }

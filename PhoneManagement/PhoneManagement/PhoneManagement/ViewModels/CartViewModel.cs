@@ -171,6 +171,24 @@ namespace PhoneManagement.ViewModels
             }
         }
 
+        public ICommand AddNewAddress { get; set; }
+        async void AddNewAddressFunc(string[] arr)
+        {
+            Shipping newShipping = new Shipping
+            {
+                SHIPPINGID = 1,
+                SHIPPINGNAME = arr[0],
+                SHIPPINGADDRESS = arr[1],
+                SHIPPINGPHONE = arr[2],
+                ACCOUNTID = 1,
+            };
+            HttpClient http = new HttpClient();
+            string json = JsonConvert.SerializeObject(newShipping);
+            StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+            var list = await http.PostAsync("http://192.168.1.5/webapidemo/api/ShippingController/AddNewAddress", content);
+            await Application.Current.MainPage.DisplayAlert(arr[0], arr[1], arr[2]);
+        }
+
         public CartViewModel()
         {
             RenderCartPage();
@@ -178,6 +196,7 @@ namespace PhoneManagement.ViewModels
             plusCommand = new Command(plusFunc);
             minusCommand = new Command(minusFunc);
             LISTADDRESS = new ObservableCollection<Shipping>();
+            AddNewAddress = new Command<string[]>(AddNewAddressFunc);
             GetShipping();
         }
     }

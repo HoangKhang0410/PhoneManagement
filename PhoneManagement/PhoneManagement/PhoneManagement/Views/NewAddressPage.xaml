@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:viewmodel="clr-namespace:PhoneManagement.ViewModels"
+             x:Class="PhoneManagement.Views.NewAddressPage">
+    <ContentPage.BindingContext>
+        <viewmodel:CartViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Ten nguoi nhan: " />
+            <Entry Keyboard="Text" x:Name="customerName"/>
+            <Label Text="Dia chi giao hang: "/>
+            <Entry Keyboard="Text" x:Name="customerAddress"/>
+            <Label Text="So dien thoai: "/>
+            <Entry Keyboard="Telephone" x:Name="customerPhone"/>
+            <Button Text="Them moi" Command="{Binding AddNewAddress}" CommandParameter="{x:Reference addNewBtn}" x:Name="addNewBtn"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

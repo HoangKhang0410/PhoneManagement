@@ -69,3 +69,4 @@ C:\Users\asus\Desktop\mobile\PhoneManagement\PhoneManagement\PhoneManagement\Pho
 C:\Users\asus\Desktop\mobile\PhoneManagement\PhoneManagement\PhoneManagement\PhoneManagement\obj\Debug\netstandard2.0\ref\PhoneManagement.dll
 C:\Users\asus\Desktop\mobile\PhoneManagement\PhoneManagement\PhoneManagement\PhoneManagement\obj\Debug\netstandard2.0\PhoneManagement.pdb
 >>>>>>> 63da02ffde5ab9a1c1492c754ece95404ab19dea
+E:\Data\Khang\Learning\Final\PhoneManagement\PhoneManagement\PhoneManagement\obj\Debug\netstandard2.0\Views\NewAddressPage.xaml.g.cs
