@@ -4,31 +4,39 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             x:Name="Ca"
              xmlns:viewmodel="clr-namespace:PhoneManagement.ViewModels"
+             Title="Giỏ hàng của bạn"
              x:Class="PhoneManagement.Views.CartPage">
     <ContentPage.BindingContext>
         <viewmodel:CartViewModel />
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
+            <Picker Title="Chọn địa chỉ" ItemsSource="{Binding LISTADDRESS}" ItemDisplayBinding="{Binding SHIPPINGADDRESS}" SelectedItem="{Binding SHIPPINGID}"/>
             <StackLayout Orientation="Horizontal" Margin="15" HorizontalOptions="Fill">
-                
+
                 <Label FontFamily="FASolid" Text="&#xf041;" FontSize="Medium" TextColor="Blue" VerticalTextAlignment="Center">
-                    
+
                 </Label>
-                <Label Text="Add Shipping Address" FontSize="Medium" TextColor="Black" VerticalTextAlignment="Center"/>
+                <Button Text="Add Shipping Address" FontSize="Medium" TextColor="Black" VerticalOptions="Center" BackgroundColor="Transparent"/>
+
                 <Label FontFamily="FASolid" Text="&#xf105;" FontSize="Medium" VerticalTextAlignment="Center" HorizontalOptions="EndAndExpand"/>
             </StackLayout>
-            <ListView x:Name="ProductList" HasUnevenRows="True" ItemsSource="{Binding LISTPRODUCT}">
+            <ListView x:Name="ProductList" HasUnevenRows="True" ItemsSource="{Binding CARTPRODUCTS, Mode=TwoWay}" Margin="15,0,0,0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
+                        <ViewCell> 
                             <StackLayout Orientation="Horizontal" Margin="0,10,0,10">
-                                <Image Source="{Binding ProductImg}" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />
+                                <Image Source="{Binding PRODUCTIMG}" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />
                                 <StackLayout>
-                                    <Label FontAttributes="Bold" FontSize="Medium" TextColor="Black" Text="{Binding ProductName}" />
-                                    <Label Text="{Binding ProductQuanity}" VerticalOptions="CenterAndExpand" />
-                                    <Label Text="{Binding ProductPrice, StringFormat='{0:F0}đ'}" TextColor="Red"  VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="Medium"/>
+                                    <Label FontAttributes="Bold" FontSize="Medium" TextColor="Black" Text="{Binding PRODUCTNAME}" />
+                                    <StackLayout Orientation="Horizontal">
+                                        <Button WidthRequest="50" Text="-" FontSize="Medium" Command="{Binding Source={x:Reference Ca}, Path=BindingContext.minusCommand}" CommandParameter="{Binding CARTDETAILID}"/>
+                                        <Label Text="{Binding PRODUCTQUANITY, Mode=TwoWay}" VerticalOptions="CenterAndExpand" />
+                                        <Button WidthRequest="50" Text="+" FontSize="Medium" Command="{Binding Source={x:Reference Ca}, Path=BindingContext.plusCommand}" CommandParameter="{Binding CARTDETAILID}" />
+                                    </StackLayout>
+                                    <Label Text="{Binding PRODUCTPRICE, StringFormat='{0:#,0.#0}đ'}" TextColor="Red"  VerticalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="Medium"/>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>
@@ -37,7 +45,7 @@
             </ListView>
             <StackLayout Orientation="Horizontal">
                 <Label FontFamily="FASolid" Text="&#xf290;" TextColor="OrangeRed" FontSize="Large" Margin="20,0,0,0" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
-                <Label Text="{Binding CART.CartTotal}" FontSize="Medium" VerticalOptions="Center" TextColor="OrangeRed"/>
+                <Label FontAttributes="Bold" Text="{Binding CART.CartTotal, StringFormat='Thành tiền: {0:#,0.#0}đ'}" FontSize="Medium" VerticalOptions="Center" TextColor="OrangeRed"/>
                 <Button Text="Thanh Toán" BackgroundColor="OrangeRed" TextColor="White" FontSize="Medium" VerticalOptions="Center"/>
             </StackLayout>
         </StackLayout>

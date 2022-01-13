@@ -60,7 +60,8 @@ namespace PhoneManagement.ViewModels
         async void AddToCartFunc(string pID)
         {
             HttpClient http = new HttpClient();
-            var oke = await http.GetStringAsync("http://192.168.0.106/webapidemo/api/CartController/AddToCart?accountID=1" + "&pID=" + pID);
+            var oke = await http.GetStringAsync("http://192.168.1.5/webapidemo/api/CartController/AddToCart?accountID=1" + "&pID=" + pID);
+            var oke2 = JsonConvert.DeserializeObject(oke).ToString();
             //bool succeed = false;
             //Boolean.TryParse(oke, out succeed);
             //if (succeed)
@@ -73,7 +74,7 @@ namespace PhoneManagement.ViewModels
         async void GetAllProducts()
         {
             HttpClient http = new HttpClient();
-            var data = await http.GetStringAsync("http://192.168.0.106/webapidemo/api/ProductController/GetAllProducts");
+            var data = await http.GetStringAsync("http://192.168.1.5/webapidemo/api/ProductController/GetAllProducts");
             var allProducts = JsonConvert.DeserializeObject<List<Product>>(data);
             AllProducts = new ObservableCollection<Product>();
             for(int i = 0; i < allProducts.Count; i++)
