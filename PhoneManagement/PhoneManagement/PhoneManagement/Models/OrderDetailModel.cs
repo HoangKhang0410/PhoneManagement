@@ -1,14 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace PhoneManagement.Models
 {
-    public class OrderDetailModel
+    public class OrderDetailModel : INotifyPropertyChanged
     {
-        public int OrderDetailID { get; set; }
-        public int ProductID { get; set; }
-        public int OrderID { get; set; }
-        public int ProductQuanity { get; set; }
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+        private int OrderDetailID;
+        private int ProductID;
+        private int OrderID;
+        private int ProductQuanity;
+
+        public int ORDERDETAILID
+        {
+            get { return OrderDetailID; }
+            set
+            {
+                OrderDetailID = value;
+                OnPropertyChanged("ORDERDETAILID");
+            }
+        }
+        public int PRODUCTID
+        {
+            get { return ProductID; }
+            set
+            {
+                ProductID = value;
+                OnPropertyChanged("PRODUCTID");
+            }
+        }
+        public int ORDERID
+        {
+            get { return OrderID; }
+            set
+            {
+                OrderID = value;
+                OnPropertyChanged("ORDERID");
+            }
+        }
+        public int PRODUCTQUANITY
+        {
+            get { return ProductQuanity; }
+            set
+            {
+                ProductQuanity = value;
+                OnPropertyChanged("PRODUCTQUANITY");
+            }
+        }
+
     }
 }

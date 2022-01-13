@@ -5,34 +5,39 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewmodel="clr-namespace:PhoneManagement.ViewModels"
              mc:Ignorable="d"
-             x:Class="PhoneManagement.Views.HistoryOrderPage">
+             x:Name="OP"
+             x:Class="PhoneManagement.Views.HistoryOrderPage"
+             Title="Lịch sử đơn hàng">
     <ContentPage.BindingContext>
         <viewmodel:OrderViewModel></viewmodel:OrderViewModel>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <ListView HasUnevenRows="True" x:Name="lvOrder" ItemsSource="{Binding }" >
+        <ListView HasUnevenRows="True" x:Name="lvOrder" ItemsSource="{Binding AllOrdersProduct}" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Padding="10" Margin="0,0,0,10">
+                        <StackLayout Padding="10" Margin="0,0,0,10" BackgroundColor="White">
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding ProductCategory}" TextColor="Black" FontAttributes="Bold"></Label>
-                                <Label Text="Hoàn thành" HorizontalOptions="EndAndExpand" TextColor="Red" ></Label>
+                                <Label Text="{Binding OrderDate}" TextColor="Black" FontAttributes="Bold"></Label>
+                                <Label Text="{Binding OrderStatus}" HorizontalOptions="EndAndExpand" TextColor="Red" ></Label>
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="{Binding ProductImg}" WidthRequest="100"></Image>
                                 <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand" Margin="0,0,20,0">
                                     <Label Text="{Binding ProductName}" HorizontalOptions="StartAndExpand" TextColor="Black"></Label>
-                                    <Label Text="{Binding ProductQuanity, StringFormat='x{0:C}'}" TextColor="Black" HorizontalOptions="EndAndExpand"></Label>
-                                    <Label Text="{Binding ProductPrice, StringFormat='{0:C} vnđ'}" TextColor="Black" HorizontalOptions="EndAndExpand"></Label>
+                                    <Label Text="{Binding ProductQuanity,StringFormat='x{0}'}" TextColor="Black" HorizontalOptions="EndAndExpand"></Label>
+                                    <Label Text="{Binding ProductPrice, StringFormat='{0:#,0.#0} đ'}" TextColor="Black" HorizontalOptions="EndAndExpand"></Label>
                                 </StackLayout>
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="Đánh giá" BackgroundColor="blue" TextColor="White" Padding="20,5,20,5"></Label>
-                                <Label Text="{Binding ProductPrice, StringFormat='Thành tiền {0:C} vnđ'}" TextColor="Black" FontAttributes="Bold" HorizontalOptions="EndAndExpand" VerticalOptions="Center"></Label>
+                                <Button Text="Xem chi tiết"  BackgroundColor="DarkOrange" TextColor="White" FontSize="Small" Command="{Binding Source={x:Reference OP}, Path=BindingContext.ShowDetailOrderCommand}" CommandParameter="{Binding OrderID}" ></Button>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                    <Label FontFamily="FASolid" Text="&#xf6f2;"  VerticalOptions="Center" TextColor="DarkOrange" FontSize="20" Margin="20,0,0,0"></Label>
+                                    <Label Text="Thành tiền" FontAttributes="Bold" VerticalOptions="Center" TextColor="Black"></Label>
+                                    <Label Text="{Binding OrderTotal, StringFormat='{0:#,0.#0} đ'}" TextColor="DarkOrange" FontAttributes="Bold" HorizontalOptions="EndAndExpand" VerticalOptions="Center"></Label>
+                                </StackLayout>
                             </StackLayout>
                         </StackLayout>
-
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

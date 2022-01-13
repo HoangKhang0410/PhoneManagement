@@ -22,5 +22,10 @@ namespace PhoneManagement.Views
         {
             PopupNavigation.Instance.PushAsync(new EditProfilePopup());
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new HistoryOrderPage());
+        }
     }
 }

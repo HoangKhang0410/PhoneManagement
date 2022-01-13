@@ -6,12 +6,13 @@
              xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
              xmlns:viewmodel="clr-namespace:PhoneManagement.ViewModels"
              mc:Ignorable="d"
-             x:Class="PhoneManagement.Views.EditProfilePopup">
+             x:Class="PhoneManagement.Views.EditProfilePopup"
+            >
     <ContentPage.BindingContext>
         <viewmodel:ProfileViewModel></viewmodel:ProfileViewModel>
     </ContentPage.BindingContext>
-    <StackLayout BackgroundColor="White" HeightRequest="500" Margin="30">
-        <Label Text="Chỉnh sửa thông tin cá nhân" Margin="40,20,0,0" FontSize="20" TextColor="Black" FontAttributes="Bold"></Label>
+    <StackLayout BackgroundColor="White" HeightRequest="400" HorizontalOptions="Center">
+        <Label Text="Chỉnh sửa thông tin cá nhân" BackgroundColor="Transparent" Margin="40,20,0,0" FontSize="20" TextColor="Black" FontAttributes="Bold"></Label>
         <Grid Margin="10,20,10,0">
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -22,18 +23,17 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="3*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Label Text="Tên:" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" TextColor="Black" FontSize="18"></Label>
+            <Label Text="Tên:" Grid.Row="0" Grid.Column="0" HorizontalOptions="EndAndExpand" VerticalOptions="Center" TextColor="Black" FontSize="18"></Label>
             <Entry Text="{Binding Profile.ACCOUNTNAME, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"></Entry>
 
-            <Label Text="SDT:" Grid.Row="1" Grid.Column="0"  VerticalOptions="Center"  TextColor="Black" FontSize="18"></Label>
-            <Entry Text="{Binding Profile.ACCOUNTNAME, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" ></Entry>
-    
-            <Label Text="Email:" Grid.Row="2" Grid.Column="0"  VerticalOptions="Center"  TextColor="Black" FontSize="18"></Label>
+            <Label Text="SDT:" Grid.Row="1" Grid.Column="0" HorizontalOptions="EndAndExpand"  VerticalOptions="Center"  TextColor="Black" FontSize="18"></Label>
+            <Entry Text="{Binding Profile.ACCOUNTPHONE, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" ></Entry>
+
+            <Label Text="Email:" Grid.Row="2" Grid.Column="0" HorizontalOptions="EndAndExpand"  VerticalOptions="Center"  TextColor="Black" FontSize="18"></Label>
             <Entry Text="{Binding Profile.ACCOUNTEMAIL, Mode=TwoWay}"   Grid.Row="2" Grid.Column="1"></Entry>
         </Grid>
       
-        <Button x:Name="btnClosePopupEditProfile" Clicked="btnClosePopupEditProfile_Clicked"></Button>
-        <Button Text="Cập nhật" HorizontalOptions="CenterAndExpand" Command="{Binding UpdateProfileCommand}" BackgroundColor="Blue" TextColor="White"></Button>
+        <Button Text="Cập nhật" HorizontalOptions="CenterAndExpand" Margin="0,30,0,0" Command="{Binding UpdateProfileCommand}" BackgroundColor="Blue" TextColor="White"></Button>
     </StackLayout>
                
 </pages:PopupPage>

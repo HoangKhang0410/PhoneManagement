@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using PhoneManagement.Models;
 using PhoneManagement.Views;
+using Rg.Plugins.Popup.Extensions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,7 +40,6 @@ namespace PhoneManagement.ViewModels
             {
                 Profile = dsPF[i];
             }
-
         }
      
         public ICommand UpdateProfileCommand { get; set; }
@@ -53,7 +53,9 @@ namespace PhoneManagement.ViewModels
             StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
             var chuoi = await http.PutAsync("http://www.wjbu-project.somee.com/api/CartController/UpdateProfile", content);
-            await Application.Current.MainPage.Navigation.PushAsync(new ProfilePage());
+
+            await Application.Current.MainPage.Navigation.PopPopupAsync();
+           // await Application.Current.MainPage.Navigation.PushAsync(new ProfilePage());
         }
      
         public ProfileViewModel()

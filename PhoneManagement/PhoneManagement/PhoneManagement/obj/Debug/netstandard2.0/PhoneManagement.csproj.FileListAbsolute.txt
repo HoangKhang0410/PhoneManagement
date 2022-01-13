@@ -67,3 +67,4 @@ C:\Users\THAI\Desktop\Mobile\PhoneManagement\PhoneManagement\PhoneManagement\Pho
 C:\Users\THAI\Desktop\Mobile\PhoneManagement\PhoneManagement\PhoneManagement\PhoneManagement\obj\Debug\netstandard2.0\Views\EditProfilePopup.xaml.g.cs
 C:\Users\THAI\Desktop\Mobile\PhoneManagement\PhoneManagement\PhoneManagement\PhoneManagement\obj\Debug\netstandard2.0\PhoneManagement.csproj.CoreCompileInputs.cache
 C:\Users\THAI\Desktop\Mobile\PhoneManagement\PhoneManagement\PhoneManagement\PhoneManagement\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\THAI\Desktop\Mobile\PhoneManagement\PhoneManagement\PhoneManagement\PhoneManagement\obj\Debug\netstandard2.0\Views\OrderDetailPage.xaml.g.cs

@@ -5,31 +5,46 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewmodel="clr-namespace:PhoneManagement.ViewModels"
              xmlns:fa="clr-namespace:FontAwesome"
+             NavigationPage.HasNavigationBar="False"
              mc:Ignorable="d"
-             x:Class="PhoneManagement.Views.ProfilePage">
+             x:Class="PhoneManagement.Views.ProfilePage" >
     <ContentPage.BindingContext>
         <viewmodel:ProfileViewModel></viewmodel:ProfileViewModel>
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <Frame HeightRequest="120" BackgroundColor="#A32BA5">
+            <Frame HeightRequest="120" BackgroundColor="DarkOrange">
                 <StackLayout Orientation="Horizontal">
-                    <Frame WidthRequest="100" HeightRequest="100" CornerRadius="100" Margin="0,0,20,0">
+                    <Frame WidthRequest="80" HeightRequest="100" CornerRadius="100" Margin="0,0,20,0">
                         <Image Source="default_avatar.png"></Image>
                     </Frame>
                     <StackLayout VerticalOptions="Center">
                         <Label Text="{Binding Profile.ACCOUNTNAME, Mode=TwoWay}" FontSize="24" TextColor="White" ></Label>
-                        <StackLayout>
-
-
-                            <Button x:Name="btnEditProfile" Text="Chỉnh sửa thông tin" Clicked="btnEditProfile_Clicked"></Button>
+                        <StackLayout Orientation="Horizontal">
+                            <Label FontFamily="FASolid" Text="&#xf044;" TextColor="White" FontSize="25" VerticalTextAlignment="Center"> </Label>
+                            <Button x:Name="btnEditProfile" BackgroundColor="Transparent" Padding="0" TextColor="white" FontSize="Small" Text="Chỉnh sửa thông tin" Clicked="btnEditProfile_Clicked"></Button>
                         </StackLayout>
                     </StackLayout>
                 </StackLayout>
             </Frame>
-            <Label Text="{Binding Profile.ACCOUNTNAME,Mode=TwoWay}" Padding="20,10,0,10" TextColor="Black"></Label>
-            <Label Text="{Binding Profile.ACCOUNTEMAIL, Mode=TwoWay}" Padding="20,10,0,10" TextColor="Black"></Label>
-            <Button x:Name="btnLogout" Text="Đăng xuất" BackgroundColor="#A32BA5" TextColor="White" Padding="50,0,50,0" HorizontalOptions="CenterAndExpand"></Button>
+            <StackLayout Orientation="Horizontal" Margin="20,20,0,20">
+                <Label FontFamily="FASolid" Text="&#xf007;" FontSize="20" TextColor="DarkOrange" Margin="0,0,10,0"></Label>
+                <Label Text="{Binding Profile.ACCOUNTNAME,Mode=TwoWay}"  TextColor="Black"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center" Margin="20,0,0,20">
+                <Label FontFamily="FASolid" Text="&#xf0e0;" FontSize="20" TextColor="DarkOrange"  Margin="0,0,10,0"></Label>
+                <Label Text="{Binding Profile.ACCOUNTEMAIL, Mode=TwoWay}"  TextColor="Black"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center" Margin="20,0,0,20">
+                <Label FontFamily="FASolid" Text="&#xf095;" FontSize="20" TextColor="DarkOrange"  Margin="0,0,10,0"></Label>
+                <Label Text="{Binding Profile.ACCOUNTPHONE, Mode=TwoWay}"  TextColor="Black"></Label>
+            </StackLayout>
+            <BoxView WidthRequest="100" HeightRequest="1" BackgroundColor="#f0f0f0"></BoxView>
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center" Margin="20,20,0,20">
+                <Label FontFamily="FASolid" Text="&#xf022;" FontSize="20" TextColor="DarkOrange"  Margin="0,15,10,0"></Label>
+                <Button Text="Xem lịch sử đơn hàng" TextColor="Black" BackgroundColor="Transparent" VerticalOptions="Center" Padding="0" FontAttributes="None" Clicked="Button_Clicked"></Button>
+            </StackLayout>
+            <Button x:Name="btnLogout" Text="Đăng xuất" BackgroundColor="DarkOrange" TextColor="White" Padding="50,0,50,0" HorizontalOptions="CenterAndExpand"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
